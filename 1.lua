@@ -19,11 +19,8 @@ function p1(part)
 				line = string.gsub(line, k,v)
 			end
 		end
-		for i=1, #line do
-			c = string.sub(line,i,i)
-			if tonumber(c) then
-				table.insert(n,c)
-			end
+		for d in string.gmatch(line,"%d") do
+			table.insert(n,d)
 		end
 		sum = sum + n[1]*10+n[#n]
 	end
